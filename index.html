@@ -1,22 +1,48 @@
 <style>
-	.nav{
+ 	ul
+	{
+		list-style-type: none;
 		display: flex;
-		position: fixed;
-	    }
+		margin: 0;
+		padding: 0;
+	} 
+	.ulRight
+	{	
+		margin-left: auto;
+	}
+	.ulSearch
+	{
+		display: block;
+		vertical-align: middle;
+	}
+	li
+	{
+		padding: 10px;
+	}
+	.imgApp
+	{
+		width: 1em;
+		height: 1em;
+	}     
 </style>
 
 <html>
 	<body>
-		<div class = "nav">
-			<div>About</div>
-			<div>Store</div>
-			<div>Gmail</div>
-			<div>Images</div>
-			<input type = "button" text = "Sign in">
-		</div>
+		
+         	<ul>
+			<li>About</li>
+			<li>Store</li>
+			<ul class = "ulRight">
+				<li>Gmail</li>
+				<li>Images</li>
+				<li><img src ="GoogleAppsLogo.png" alt="Google Apps" class = "imgApp">
+			</ul>
+		</ul>
 
-		<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-		<input type="text" > 
+		 <ul class = "ulSearch">
+			<li><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"></li>
+			<input type="text" > 
+		</ul>
 	</body>
 
 </html>
