@@ -2,47 +2,63 @@
  	ul
 	{
 		list-style-type: none;
-		display: flex;
 		margin: 0;
 		padding: 0;
+		font-family: arial,sans-serif, "Times New Roman";
+		font-size: 13px;
 	} 
-	.ulRight
+	li
+	{
+		margin:10px;
+		margin-right:20px;
+		opacity: .75;
+	}
+	.liLeft
 	{	
-		margin-left: auto;
+		float: left;
+		margin:10px;
 	}
 	.ulSearch
 	{
 		display: block;
 		vertical-align: middle;
 	}
-	li
+	.liRight
 	{
-		padding: 10px;
+		float: right;
 	}
 	.imgApp
 	{
-		width: 1em;
-		height: 1em;
-	}     
+		width: 2em;
+		height: 2em;
+		opacity: .75;
+	}    
+	.centerElements
+	{	
+		position: fixed;
+		left: 50%;
+		top: 30%;
+		transform: translate(-50%, -50%);
+	}
+
 </style>
 
 <html>
 	<body>
 		
          	<ul>
-			<li>About</li>
-			<li>Store</li>
-			<ul class = "ulRight">
-				<li>Gmail</li>
-				<li>Images</li>
-				<li><img src ="GoogleAppsLogo.png" alt="Google Apps" class = "imgApp">
-			</ul>
+		
+			<li class="liLeft">About</li>
+			<li class="liLeft">Store</li>
+			<li class="liRight"><button type="button">Sign In</button></li>
+			<li class="liRight"><img src ="GoogleAppsLogo.png" alt="Google Apps" class = "imgApp"></li>
+                        <li class="liRight">Images</li>
+			<li class="liRight">Gmail</li>	
 		</ul>
-
-		 <ul class = "ulSearch">
-			<li><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"></li>
+	
+			<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="centerElements">
 			<input type="text" > 
-		</ul>
+
 	</body>
 
 </html>
