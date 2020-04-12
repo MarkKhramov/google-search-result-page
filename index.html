@@ -15,8 +15,10 @@
 	}
 	.liLeft
 	{	
-		float: left;
+		position: fixed;
 		margin:10px;
+		top: 12px;
+		left: 15px;
 	}
 	.ulSearch
 	{
@@ -29,15 +31,22 @@
 	}
 	.imgApp
 	{
-		width: 2em;
-		height: 2em;
-		opacity: .75;
+		width: 30px;
+		height: 30px;
+		opacity: .55;
 	}    
 	.centerElements
 	{	
 		position: fixed;
 		left: 50%;
-		top: 30%;
+		top: 25.5%;
+		transform: translate(-50%, -50%);
+	}
+	.centerSearch
+	{
+	  	position: fixed; 
+		left: 50%; 
+		top: 40%;
 		transform: translate(-50%, -50%);
 	}
 
@@ -49,7 +58,7 @@
          	<ul>
 		
 			<li class="liLeft">About</li>
-			<li class="liLeft">Store</li>
+			<li class="liLeft" style = "left: 67px;">Store</li>
 			<li class="liRight"><button type="button">Sign In</button></li>
 			<li class="liRight"><img src ="GoogleAppsLogo.png" alt="Google Apps" class = "imgApp"></li>
                         <li class="liRight">Images</li>
@@ -57,7 +66,7 @@
 		</ul>
 	
 			<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="centerElements">
-			<input type="text" > 
+			<input type="text" class ="centerSearch"> 
 
 	</body>
 
