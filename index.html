@@ -55,21 +55,34 @@
 	}
 	.centerSearch
 	{
-	  	position: fixed; 
-		left: 50%; 
-		top: 40%;
-		transform: translate(-50%, -50%);
+	  	
 		width: 400px;
-		border-style: none;
-		
+		border-style: solid;
+		border-color: white;
+		height: 40px;
+		border-radius: 30px;
+		margin-left: 5px;
 	}
 	.centerSearch:hover
 	{
-		border-radius: 1px;
+		
 		border-color: #0000001c;
 		border-style: solid;
+		border-top: none;
+		border-left: none;
+		margin-left: 5px;
 	}
-	
+	.centerSearch:focus
+	{
+		box-shadow: 0px 2px #0000001c;
+	}
+	.searchGlassImage
+	{
+		height:15px; 
+		width:15px;
+		opacity: .45;
+		align-self: center;
+	}
 	.signInButton
 	{
 		border-radius: 2px; 
@@ -94,7 +107,73 @@
 	}
 	.searchContainer
 	{
-		display:flex;
+		position: fixed; 
+		left: 50%; 
+		top: 35%;
+		transform: translate(-50%, -50%);
+	}
+	.buttonContainer
+	{
+		position: fixed; 
+		left: 50%; 
+		top: 40%;
+		transform: translate(-50%, -50%);
+		outline: none;
+		
+	}
+	.searchButtons
+	{
+		font-family: arial;
+		opacity:.75;
+		border-style: solid;
+		border-color: white;
+		border-radius: 5px;
+		height: 36px;
+		border-width: thin;
+		margin:2px;
+		
+	}
+	.searchButtons:hover
+	{
+		border-color:#0000004a;
+	}
+	.searchButtons:active
+	{
+		border-color:#5042f4;
+		
+	}
+	.leftBottomNavBar
+	{
+		padding: 0;
+		font-family: arial,sans-serif, "Times New Roman";
+		font-size: 13px;
+		margin:10px;
+		opacity: .75;
+		position:fixed;
+		left:15px;
+		bottom: 3px;
+		
+	}
+	.rightBottomNavBar
+	{
+		padding: 0;
+		font-family: arial,sans-serif, "Times New Roman";
+		font-size: 13px;
+		margin:10px;
+		opacity: .75;
+		position: fixed;
+		right:15px;
+		bottom: 3px;
+		
+	}
+	a
+	{
+		text-decoration: none;
+		color:black;
+	}
+	a:hover
+	{
+		text-decoration: underline;
 	}
 </style>
 
@@ -112,9 +191,33 @@
 		</ul>
 	
 			<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="centerElements">
-		<div class="searchContainer">
+	<div class="searchContainer">
+		<div style="display:flex;">		
+			<img src="102-1020850_google-clipart-search-bar-search-magnifying-glass-png.png.jpeg" class="searchGlassImage" >
 			<input type="text" class ="centerSearch"> 
 		</div>
+	</div>
+	<div class="buttonContainer">
+		<div style="display:flex;">
+			<button type = "button" class="searchButtons">Google Search</button>
+			<button type = "button" class="searchButtons">I'm Feeling Lucky</button>
+		</div>
+	</div>
+	<div class="leftBottomNavBar">
+		<div style="display:flex">
+			<a href = "">Advertising</a>
+			<a href = "" style = "margin-left: 85px; position: fixed;">Business</a>
+			<a href = "" style = "margin-left: 155px; position:fixed;">How Search Works</a>
+		</div>
+	</div>
+
+	<div class="rightBottomNavBar">
+		<div style="display:flex">
+			<a href = "" style="margin-right: 33px;">Privacy</a>
+			<a href = "" style="margin-right:29px;">Terms</a>
+			<a href = "">Settings</a>
+		</div>
+	</div>
 	</body>
 
 </html>
