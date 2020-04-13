@@ -20,6 +20,10 @@
 		top: 12px;
 		left: 15px;
 	}
+	.liLeft:hover
+	{
+		text-decoration: underline;
+	}
 	.ulSearch
 	{
 		display: block;
@@ -27,13 +31,20 @@
 	}
 	.liRight
 	{
-		float: right;
+		position: fixed;
+		margin: 10px;
+		top:13px;
+		right: 15px;
+	}
+	.liRight:hover
+	{
+		text-decoration: underline;
 	}
 	.imgApp
 	{
-		width: 30px;
-		height: 30px;
-		opacity: .55;
+		width: 24.5px;
+		height: 24.5px;
+		opacity: .75;
 	}    
 	.centerElements
 	{	
@@ -48,8 +59,43 @@
 		left: 50%; 
 		top: 40%;
 		transform: translate(-50%, -50%);
+		width: 400px;
+		border-style: none;
+		
 	}
-
+	.centerSearch:hover
+	{
+		border-radius: 1px;
+		border-color: #0000001c;
+		border-style: solid;
+	}
+	
+	.signInButton
+	{
+		border-radius: 2px; 
+		height: 29px; 
+		width: 69px;
+		color: white;
+		background-color:#5042f4;
+		font-family: arial;
+		font-weight: bold;
+		border: 1px solid #5042f4;
+		font-size:12px;
+		top: 5px;
+	}
+	.googleAppsLogo
+	{
+		right: 105px;
+		top: 7px;
+	}
+	.googleAppsLogo:hover
+	{
+		opacity: 1;
+	}
+	.searchContainer
+	{
+		display:flex;
+	}
 </style>
 
 <html>
@@ -57,17 +103,18 @@
 		
          	<ul>
 		
-			<li class="liLeft">About</li>
-			<li class="liLeft" style = "left: 67px;">Store</li>
-			<li class="liRight"><button type="button">Sign In</button></li>
-			<li class="liRight"><img src ="GoogleAppsLogo.png" alt="Google Apps" class = "imgApp"></li>
-                        <li class="liRight">Images</li>
-			<li class="liRight">Gmail</li>	
+			<li class="liLeft"><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" style="text-decoration: none; color: black;">About</a></li>
+			<li class="liLeft" style = "left: 67px;"><a href=https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US style="text-decoration: none; color:black;">Store</a></li>
+			<li class="liRight signInButton" ><button type="button" class= "signInButton">Sign In</button></li>
+			<li class="liRight googleAppsLogo"><img src ="GoogleAppsLogo.png" alt="Google Apps" class = "imgApp"></li>
+                        <li class="liRight" style = "right: 148px;"><a href =https://www.google.com/imghp?hl=en&tab=wi&ogbl style="text-decoration: none; color: black;">Images</li>
+			<li class="liRight" style = "right: 209px;"><a href="https://www.google.com/gmail/about/" style="text-decoration: none; color: black;">Gmail</a></li>	
 		</ul>
 	
 			<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="centerElements">
+		<div class="searchContainer">
 			<input type="text" class ="centerSearch"> 
-
+		</div>
 	</body>
 
 </html>
